@@ -1,0 +1,1 @@
+CREATE INDEX idx_lower_case_name ON track (LOWER(name))

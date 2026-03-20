@@ -15,7 +15,7 @@ CONFIG = {
             "account": "sacodeassessment",
             "signature": "sv=2022-11-02&ss=b&srt=o&sp=wc&se=2034-11-11T11:00:00Z&st=2024-11-10T23:00:00Z&spr=https&sig=D%2BgRbWPJDTmsbPtyfTEiTnb7gg594uNsvm62oQK49Yg%3D",
             "container": "results",
-            "path": "ingest-assessment-2026-03-17-MV",
+            "path": "ingest-assessment-2026-03-20-MV",
         },
         "postgres": {
             "host": "code001.ecsbdp.com",

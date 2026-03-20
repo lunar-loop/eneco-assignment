@@ -105,8 +105,9 @@ Commands to run for analysis:
 python main.py analyze check_airports.sql sqlite
 python main.py analyze check_runways.sql sqlite
 python main.py analyze compare_purchases.sql postgres
-python main.py analyze recommend_albums_old.sql postgres
-python main.py analyze recommend_albums_new.sql postgres
+python main.py analyze recommend_albums.sql postgres
+python main.py analyze create_new_track_index.sql postgres
+python main.py analyze recommend_albums.sql postgres
 ```
 
 If you want to run any other query, just put it in the file adhoc_query.sql and run the following:
