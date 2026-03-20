@@ -10,19 +10,19 @@ Based on the datasets and requirements provided in the assignment, the following
 
 ```mermaid
 graph TD;
-    Revenue File-->Revenue API;
-    Runway File-->Runway Bronze;
-    Runway Bronze-->Runway Silver;
-    Airport File-->Airport Bronze;
-    Airport Bronze-->Airport Silver;
-    Country File-->Country Silver;
-    Airport Silver-->Aggregated Gold;
-    Runway Silver-->Aggregated Gold;
-    Country Silver-->Aggregated Gold;
-    Aggregated Gold-->Azure Warehouse;
-    Country V2 API-->Country V2 Bronze;
-    Country Silver-->Country V2 Bronze;
-    Country V2 Bronze-->Country V2 Silver;
+    Revenue_File-->Revenue_API;
+    Runway_File-->Runway_Bronze;
+    Runway_Bronze-->Runway_Silver;
+    Airport_File-->Airport_Bronze;
+    Airport_Bronze-->Airport_Silver;
+    Country_File-->Country_Silver;
+    Airport_Silver-->Aggregated_Gold;
+    Runway_Silver-->Aggregated_Gold;
+    Country_Silver-->Aggregated_Gold;
+    Aggregated_Gold-->Azure_Warehouse;
+    Country_V2_API-->Country_V2_Bronze;
+    Country_Silver-->Country_V2_Bronze;
+    Country_V2_Bronze-->Country_V2_Silver;
 ```
 
 Please note countries data from the csv file is directly ingested to silver layer because the assignment mentions that its supplied in high quality. Countries V2 is the dataset coming from the new next-gen platform. For simplicity, partitions, history or versions are not maintained in any table.
@@ -70,7 +70,7 @@ Unit tests are provided for some functions and can be run by:
 pytest
 ```
 
-Data is already ingested and present in the data/data.db file but in case you want to ingest data end to end again, following is the sequence of commands to run. You can also run any of these commands randomly, since the pipeline steps are idempotent.
+Data is already ingested and present in the data/data.db file but in case you want to ingest data end to end again, following is the sequence of commands to run. After one end to end run is completed you can also run any of these commands randomly, since the pipeline steps are idempotent.
 
 
 ```bash
@@ -86,7 +86,7 @@ python main.py load-data output_airport_statistics
 python main.py load-data output_revenues
 ```
 
-Sequence of commands to run to validate data: 
+Commands to run to validate data: 
 
 ```bash
 python main.py validate bronze_airports
