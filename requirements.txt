@@ -1,1 +1,8 @@
-
+typer
+requests
+azure-storage-blob
+psycopg2-binary
+SQLAlchemy
+pandas
+tabulate
+pytest
