@@ -1,9 +1,9 @@
 import pandas as pd
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, text
 
 
 class Postgres:
-    
+
     def __init__(self, conn_details):
         self.conn_details = conn_details
 
@@ -19,4 +19,4 @@ class Postgres:
         )
 
         with engine.connect() as conn:
-            return pd.read_sql_query(query, conn)
+            return pd.read_sql_query(text(query), conn)
